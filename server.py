@@ -15,19 +15,19 @@ def login():
 
     return render_template('index.html')
 
-# this will likely be for users to see all their appointments
+
 @app.route('/<path>')
 def route(path):
 
     return render_template('index.html')
 
-# we need a page for displaying the results of the appointment search
+
 @app.route('/api/melons')
 def get_melons():
     melons = Melon.query.all()
     return jsonify({melon.melon_code: melon.to_dict() for melon in melons})
 
-# we need a page to search for appointments
+
 @app.route('/<path>/<code>')
 def nested_route(path, code):
 
