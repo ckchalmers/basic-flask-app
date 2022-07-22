@@ -1,18 +1,7 @@
 from flask_sqlalchemy import SQLAlchemy
 
 
-db = SQLAlchemy()
-
-# for tastings, we need timeslot and date
-# for users, we just need name
-# a tasting can have one user, but users can have multiple tastings
-# users can have only one tasting per day
-# class Date(db.Model):
-#     """Date"""
-
-#     __tablename__ = 'date'
-
-    
+db = SQLAlchemy()    
 
 
 class Melon(db.Model):
